@@ -64,7 +64,10 @@ public class ArcadeRetroApplication {
 				// filtro giochi di difficoltà difficile
 				case "4":
 				{
-					gameService.printFromDifficulty();
+					System.out.print("Inserisci il livello di difficoltà: ");
+					int difficultLevel = scanner.nextInt();
+					scanner.nextLine();
+					gameService.printFromDifficulty(difficultLevel);
 					break;
 				}
 				//caso 5, mi fa uscire dal ciclo
