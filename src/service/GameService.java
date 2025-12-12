@@ -29,7 +29,7 @@ public class GameService {
 	{
 		  for(int i = 0; i < this.games.size(); i++) 
 		  {
-			  if(/*this.games.get(i).getName().equals(search)*/this.games.get(i).getName().contains(search))
+			  if(this.games.get(i).getName().contains(search))
 			  {
 				  System.out.println("Hai cercato il " + this.games.get(i).toString());
 			  }
@@ -47,7 +47,7 @@ public class GameService {
 		  {
 			  if(this.games.get(i).getDifficultLevel() >= 4)
 			  {
-				  System.out.println((cont) + "° gioco difficile:\n " + this.games.get(i).toString());
+				  System.out.println((cont) + "° gioco difficile:\n" + this.games.get(i).toString());
 				  cont++;
 			  }
 			  else 
