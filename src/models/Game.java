@@ -35,6 +35,10 @@ public class Game {
 	public void setDifficultLevel(int difficultLevel) {
 		this.difficultLevel = difficultLevel;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Gioco --> nome: " + name + ", anno pubblicazione: " + releaseYear + ", difficoltà gioco: " + difficultLevel;
+	}
 	
 }
