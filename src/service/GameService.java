@@ -11,6 +11,7 @@ public class GameService {
 	{	
 		Game game = new Game(name, realeseYear, difficultLevel);
 		this.games.add(game);
+		System.out.println("Gioco inserito con successo");
 	}
 	
 	public void printGameList()
