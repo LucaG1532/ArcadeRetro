@@ -1,11 +1,13 @@
 import java.util.Scanner;
 
+import service.GameService;
+
 public class ArcadeRetroApplication {
 
 	public static void main(String[] args) {
 
 		Scanner scanner = new Scanner(System.in);
-		
+		GameService gameService = new GameService();
 		boolean isRunning = true;
 		
 		while(isRunning) 
@@ -22,7 +24,22 @@ public class ArcadeRetroApplication {
 			{
 				case "1":
 				{
-					
+			    System.out.println("Inserisci il nome del gioco");
+			    String name = scanner.nextLine(); 
+			    System.out.println("Inserisci l'anno di uscita");
+			    int data = scanner.nextInt();
+			    scanner.nextLine(); 
+			    System.out.println("Inserisci il livello di difficoltà");
+			    int difficultLevel = scanner.nextInt();
+			    scanner.nextLine(); 
+			    if(difficultLevel > 5)
+			    {
+			        System.out.println("A merda schifosa, reinserisci la difficoltà, MASSIMO 5");
+			        difficultLevel = scanner.nextInt();
+			        scanner.nextLine(); 
+			    }
+			    gameService.insertGame(name, data, difficultLevel);
+			    break;
 				}
 				case "2":
 				{
