@@ -42,12 +42,12 @@ public class GameService {
 		  }
 	}
 	// metodo filtra per difficoltà difficile
-	public void printFromDifficulty() 
+	public void printFromDifficulty(int difficultLevel) 
 	{
 		int cont = 1;
 		for(int i = 0; i < this.games.size(); i++) 
 		  {
-			  if(this.games.get(i).getDifficultLevel() >= 4)
+			  if(this.games.get(i).getDifficultLevel() >= difficultLevel)
 			  {
 				  System.out.println((cont) + "° gioco difficile:\n" + this.games.get(i).toString());
 				  cont++;
