@@ -5,8 +5,10 @@ import models.Game;
 
 
 public class GameService {
+	//creazione arrayList
 	ArrayList<Game> games = new ArrayList<Game>();
 	
+	//creazione metodo insertgame
 	public void insertGame(String name, int realeseYear, int difficultLevel)
 	{	
 		Game game = new Game(name, realeseYear, difficultLevel);
@@ -14,6 +16,7 @@ public class GameService {
 		System.out.println("Gioco inserito con successo");
 	}
 	
+	// creazione metodo pintgamelist 
 	public void printGameList()
 	{
 		for (int i = 0; i < this.games.size(); i++) {
@@ -21,6 +24,7 @@ public class GameService {
 		}
 	}
 	
+	// cerca gioco
 	public void searchGame(String search) 
 	{
 		  for(int i = 0; i < this.games.size(); i++) 
@@ -35,7 +39,7 @@ public class GameService {
 			  }
 		  }
 	}
-	
+	// metodo filtra per difficoltà difficile
 	public void printFromDifficulty() 
 	{
 		int cont = 1;
