@@ -19,6 +19,7 @@ public class ArcadeRetroApplication {
 			System.out.println("(3) Cerca gioco");
 			System.out.println("(4) Filtro tra i giochi più difficili (Difficoltà >= 4");
 			System.out.println("(5) Esci");
+			System.out.print("Inserire qui: ");
 			String choose = scanner.nextLine();
 			switch(choose) 
 			{
@@ -43,15 +44,19 @@ public class ArcadeRetroApplication {
 				}
 				case "2":
 				{
-					
+					gameService.printGameList();
+					break;
 				}
 				case "3":
 				{
-					
+					System.out.println("Inserisci il gioco da cercare: ");
+					String search = scanner.nextLine();
+					gameService.searchGame(search);
+					break;
 				}
 				case "4":
 				{
-					
+					break;
 				}
 				case "5":
 				{
@@ -59,9 +64,9 @@ public class ArcadeRetroApplication {
 					break;
 				}
 			}
-			System.out.println("Opzione non valida");
+			
 		}
-
+		
 	}
 
 }
