@@ -35,7 +35,7 @@ public class GameService {
 			  }
 			  else 
 			  {
-				  System.out.println("Contatto non trovato");
+				  System.out.println("Gioco non trovato");
 			  }
 		  }
 	}
@@ -52,7 +52,7 @@ public class GameService {
 			  }
 			  else 
 			  {
-				  System.out.println("Contatto non trovato");
+				  System.out.println("Gioco non trovato");
 			  }
 		  }
 	}
