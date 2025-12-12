@@ -13,7 +13,8 @@ public class GameService {
 		this.games.add(game);
 	}
 	
-	public void printGameList() {
+	public void printGameList()
+	{
 		for (int i = 0; i < this.games.size(); i++) {
 			System.out.println( (i+1) + "° " + this.games.get(i).toString());
 		}
@@ -26,6 +27,23 @@ public class GameService {
 			  if(this.games.get(i).getName().equals(search))
 			  {
 				  System.out.println("Hai cercato il " + this.games.get(i).toString());
+			  }
+			  else 
+			  {
+				  System.out.println("Contatto non trovato");
+			  }
+		  }
+	}
+	
+	public void printFromDifficulty() 
+	{
+		int cont = 1;
+		for(int i = 0; i < this.games.size(); i++) 
+		  {
+			  if(this.games.get(i).getDifficultLevel() >= 4)
+			  {
+				  System.out.println((cont) + "° gioco difficile:\n " + this.games.get(i).toString());
+				  cont++;
 			  }
 			  else 
 			  {
