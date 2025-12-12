@@ -27,16 +27,16 @@ public class GameService {
 	// cerca gioco
 	public void searchGame(String search) 
 	{
-		  int cont = 0; 
+		  boolean verify = false; 
 		  for(int i = 0; i < this.games.size(); i++) 
 		  {
 			  if(this.games.get(i).getName().contains(search))
 			  {
 				  System.out.println("il gioco trovato è:\n" + this.games.get(i).toString());
-				  cont++;
+				  verify = true;
 			  }
 		  }
-		  if(cont == 0)
+		  if(!verify)
 		  {
 			System.out.println("Gioco non trovato!");  
 		  }
