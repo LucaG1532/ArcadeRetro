@@ -56,6 +56,7 @@ public class ArcadeRetroApplication {
 				}
 				case "4":
 				{
+					gameService.printFromDifficulty();
 					break;
 				}
 				case "5":
@@ -64,6 +65,9 @@ public class ArcadeRetroApplication {
 					break;
 				}
 			}
+			System.out.println("Programma Terminato");
+			scanner.close();
+			System.exit(0);
 			
 		}
 		
