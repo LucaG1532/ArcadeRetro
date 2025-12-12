@@ -29,7 +29,7 @@ public class GameService {
 	{
 		  for(int i = 0; i < this.games.size(); i++) 
 		  {
-			  if(this.games.get(i).getName().equals(search))
+			  if(/*this.games.get(i).getName().equals(search)*/this.games.get(i).getName().contains(search))
 			  {
 				  System.out.println("Hai cercato il " + this.games.get(i).toString());
 			  }
