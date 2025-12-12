@@ -27,16 +27,18 @@ public class GameService {
 	// cerca gioco
 	public void searchGame(String search) 
 	{
+		  int cont = 0; 
 		  for(int i = 0; i < this.games.size(); i++) 
 		  {
 			  if(this.games.get(i).getName().contains(search))
 			  {
 				  System.out.println("Hai cercato il " + this.games.get(i).toString());
+				  cont++;
 			  }
-			  else 
-			  {
-				  System.out.println("Gioco non trovato");
-			  }
+		  }
+		  if(cont == 0)
+		  {
+			System.out.println("Gioco non trovato!");  
 		  }
 	}
 	// metodo filtra per difficoltà difficile
