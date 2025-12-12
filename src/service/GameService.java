@@ -32,7 +32,7 @@ public class GameService {
 		  {
 			  if(this.games.get(i).getName().contains(search))
 			  {
-				  System.out.println("Hai cercato il " + this.games.get(i).toString());
+				  System.out.println("il gioco trovato è:\n" + this.games.get(i).toString());
 				  cont++;
 			  }
 		  }
